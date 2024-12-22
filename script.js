@@ -11,37 +11,37 @@ const questions = [
     {
         question: "djidjidjidji?", 
         answers: [
-            {text: "shark", correct: false},
-            {text: "blue whale", correct: true},
-            {text: "shark", correct: false},
-            {text: "shark", correct: false},
+            { text: "shark", correct: false},
+            { text: "blue whale", correct: true},
+            { text: "shark", correct: false},
+            { text: "shark", correct: false},
         ]
     },
     {
         question: "djidjidjidji?", 
         answers: [
-            {text: "shark", correct: false},
-            {text: "blue whale", correct: true},
-            {text: "shark", correct: false},
-            {text: "shark", correct: false},
+            { text: "shark", correct: false},
+            { text: "blue whale", correct: true},
+            { text: "shark", correct: false},
+            { text: "shark", correct: false},
         ]
     },
     {
         question: "djidjidjidji?", 
         answers: [
-            {text: "shark", correct: false},
-            {text: "blue whale", correct: true},
-            {text: "shark", correct: false},
-            {text: "shark", correct: false},
+            { text: "shark", correct: false},
+            { text: "blue whale", correct: true},
+            { text: "shark", correct: false},
+            { text: "shark", correct: false},
         ]
     },
     {
         question: "djidjidjidji?", 
         answers: [
-            {text: "shark", correct: false},
-            {text: "blue whale", correct: true},
-            {text: "shark", correct: false},
-            {text: "shark", correct: false},
+            { text: "shark", correct: false},
+            { text: "blue whale", correct: true},
+            { text: "shark", correct: false},
+            { text: "shark", correct: false},
         ]
     }
 ]
@@ -56,13 +56,13 @@ let score = 0;
 function startQuiz(){
     currentQuestionIndex = 0;
     score = 0;
-    nextButton.innerHTMK = "Next";
+    nextButton.innerHTML = "Next";
     showQuestion();
 }
 
 function showQuestion(){
 resetState();
-let currentQuestion = questions[currentQuestionIndex]
+let currentQuestion = questions[currentQuestionIndex];
 let questionNo = currentQuestionIndex + 1;
 questionElement.innerHTML = questionNo + ". " + currentQuestion.question;
 
@@ -93,6 +93,13 @@ function selectAnswer(){
     } else {
         selectedBtn.classList.add("incorrect");
     }
+    Array.from(answerButtons.children).forEach(button => {
+        if(button.dataset.correct === "true") {
+            button.classList.add("correct");
+        }
+        button.disabled = true;
+    });
+    nextButton.style.display = "block";
 }
 
 startQuiz();
