@@ -1,51 +1,69 @@
+:root{
+    --base-color:#d1d1cf;
+    --base-variant:rgb(255, 157, 38);
+    --text-color:rgb(0, 0, 0);
+    --secondary-text:rgb(252, 252, 252);
+    --primary-color:rgb(252, 252, 252);
+    --accent-color:#aeaeac;
+    --borderbottom-color: rgb(255, 157, 38);
+}
+    
+.darkmode{
+    --base-color:#363737;
+    --base-variant:#292929;
+    --text-color: rgb(255, 157, 38);
+    --secondary-text:rgb(255, 157, 38);
+    --primary-color:#292929;
+    --accent-color:rgb(255, 157, 38);
+    --borderbottom-color: rgb(255, 157, 38);
+}
+
 * {
 margin: 0;
 padding: 0;
 font-family: 'Poppins', sans-serif;
 box-sizing: border-box;
-
 }
 
 body {
-    background: #ffc800;
+    background-color: var(--base-color);
 }
 
 .app {
-    background: #fff;
+    background-color: var(--primary-color);
     width: 90%;
     max-width: 600px;
     margin: 120px auto 0;
-    border-radius: 50px;
+    border-radius: 35px;
     padding: 30px;
 }
 
 .app h1 {
     font-size: 25px;
+    color: var(--text-color);
     text-align: center;
-    color: #ffc800;
     font-weight: 600;
-    border-bottom: 1px solid #333;
+    border-bottom: 1px solid var(--borderbottom-color);
     padding-bottom: 30px;
 }
 
 .quiz {
     padding: 20px 0;
-
 }
 
 .quiz h2 {
-    font-size: 18px;
+    font-size: 15px;
     text-align: center;
-    color: #000000;
+    color: var(--text-color);
     font-weight: 600;
 }
 
 .btn {
-    background: #fff;
-    color: #222;
+    background: var(--base-variant);
+    color: var(--secondary-text);
     font-weight: 500;
     width: 50%;
-    border: 1px solid #222;
+    border: 1px solid var(--base-color);
     padding: 10px;
     margin: 10px auto 0;
     text-align: center;
@@ -54,13 +72,11 @@ body {
     transition: all 0.3s;
     display: flex;
     justify-content: center;
-    
-    
 }
 
 .btn:hover:not([disabled]){
-    background: #222;
-    color: #fff;
+    background: var(--accent-color);
+    color: var(--base-variant);
 }
 
 .btn:disabled{
@@ -68,11 +84,11 @@ body {
 }
 
 #next-btn {
-    background: #001e4d;
-    color: #fff;
+    background: var(--secondary-text);
+    color: var(--base-variant);
     font-weight: 500;
     width: 150px;
-    border: 0;
+    border: 1px solid var(--base-color);
     padding: 10px;
     margin: 20px auto 0;
     border-radius: 4px;
@@ -87,10 +103,33 @@ body {
 .incorrect{
     background:#d72f2f;
 }
-  
-.dark-mode{
-    background-color: rgb(34, 34, 34);
-    color: rgb(255, 0, 0);
 
+#theme-switch{
+    height: 30px;
+    width: 30px;
+    padding: 0;
+    border-radius: 50%;
+    background-color: var(--base-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 20px;
+    right: 20px;
 }
 
+#theme-switch svg{
+    fill: var(--borderbottom-color);
+}
+
+#theme-switch svg:last-child{
+display: none;
+}
+
+.darkmode #theme-switch svg:first-child{
+    display: none;
+}
+
+.darkmode #theme-switch svg:last-child{
+   display: block; 
+}

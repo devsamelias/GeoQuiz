@@ -1,88 +1,157 @@
-function myFunction() {
-    var element = document.body;
-    element.classList.toggle("dark-mode");
-  }
+let darkmode = localStorage.getItem('darkmode')
+const themeSwitch = document.getElementById('theme-switch')
 
-  // dark mode start //
+const enableDarkmode = () => {
+    document.body.classList.add('darkmode')
+    localStorage.setItem('darkmode', 'active')
+}
 
-let darkMode= localStorage.getItem("darkMode");
- const darkModeToggle = document.querySelector('#dark-mode-toggle');
+const disableDarkmode = () => {
+    document.body.classList.remove('darkmode')
+    localStorage.setItem('darkmode', null)
+}
 
- const enableDarkMode = () => {
-    // 1. add the class darkmode
-    document.body.classList.add('darkmode');
-    // 2. update darkMode in the localStorage    
-    localStorage.setItem('darkMode', 'enabled')
- };
+if(darkmode === "active") enableDarkmode()
 
- const disableDarkMode = () => {
-    // 1. add the class darkmode
-    document.body.classList.remove('darkmode');
-    // 2. update darkMode in the localStorage    
-    localStorage.setItem('darkMode', 'null')
- };
-
- if (darkMode === 'enabled') {
-    enableDarkMode();
- }
-
- darkModeToggle.addEventListener("click", () => {
-    darkMode = localStorage.getItem("darkMode");
-    if (darkMode !== 'enabled') {
-        enableDarkMode();
-        console.log(darkMode);
-    } else {
-        disableDarkMode();
-        console.log(darkMode);
-    }
- });
-
- // dark mode end //
+themeSwitch.addEventListener("click", () => {
+    darkmode = localStorage.getItem('darkmode')
+    darkmode !== "active" ? enableDarkmode() : disableDarkmode()
+})
 
 const questions = [
     {
-        question: "Which is the largest animal in the world?", 
+        question: "Which two countries share the longest border in the world?", 
         answers: [
-            {text: "shark", correct: false},
-            {text: "blue whale", correct: true},
-            {text: "shark", correct: false},
-            {text: "shark", correct: false},
+            {text: "Canada and the United States", correct: false},
+            {text: "Brazil and Argentina", correct: true},
+            {text: "India and Pakistan", correct: false},
+            {text: "Russia and China", correct: true},
         ]
     },
     {
-        question: "djidjidjidji?", 
+        question: "Which two of the following countries are located on the Iberian Peninsula?", 
         answers: [
-            { text: "jfewuowk", correct: false },
-            { text: "blufnjfne", correct: false },
-            { text: "shafsfsgrk", correct: true },
-            { text: "shaweokrk", correct: false },
+            { text: "Italy", correct: false },
+            { text: "Spain", correct: true },
+            { text: "Portugal", correct: true },
+            { text: "France", correct: false },
         ]
     },
     {
-        question: "djidjidjidji?", 
+        question: "Which two rivers flow through the city of Paris?", 
         answers: [
-            { text: "shark", correct: true },
-            { text: "blue whale", correct: false },
-            { text: "shark", correct: false },
-            { text: "shark", correct: false },
+            { text: "Seine", correct: true },
+            { text: "Danube", correct: false },
+            { text: "Thames", correct: false },
+            { text: "Rhone", correct: true },
         ]
     },
     {
-        question: "djidjidjidji?", 
+        question: "Which two countries have the largest populations in Africa?", 
         answers: [
-            { text: "shark", correct: false },
-            { text: "blue whale", correct: false },
-            { text: "shark", correct: true },
-            { text: "shark", correct: false },
+            { text: "Nigeria", correct: true },
+            { text: "Ethiopia", correct: true },
+            { text: "South Africa", correct: false },
+            { text: "Egypt", correct: false },
         ]
     },
     {
-        question: "djidjidjidji?", 
+        question: "Which two mountain ranges are located in North America?", 
         answers: [
-            { text: "shark", correct: false },
-            { text: "blue whale", correct: false },
-            { text: "shark", correct: false },
-            { text: "shark", correct: true },
+            { text: "Andes", correct: false },
+            { text: "Alps", correct: false },
+            { text: "Rockies", correct: true },
+            { text: "Appalachian", correct: true },
+        ]
+    },
+    {
+        question: "Which two countries share the island of Borneo?", 
+        answers: [
+            { text: "Thailand", correct: false },
+            { text: "Indonesia", correct: true },
+            { text: "Brunei", correct: false },
+            { text: "Malaysia", correct: true },
+        ]
+    },
+    {
+        question: "Which two African countries are landlocked and bordered by South Africa?", 
+        answers: [
+            { text: "Zimbabwe", correct: false },
+            { text: "Botswana", correct: true },
+            { text: "Lesotho", correct: true },
+            { text: "Namibia", correct: false },
+        ]
+    },
+    {
+        question: "Which two European capitals are located on rivers that share the same name as the city?", 
+        answers: [
+            { text: "Paris", correct: true },
+            { text: "Budapest", correct: true },
+            { text: "London", correct: false },
+            { text: "Vienna", correct: false },
+        ]
+    },
+    {
+        question: "Which two countries are separated by the Strait of Gibraltar?", 
+        answers: [
+            { text: "Morocco", correct: true },
+            { text: "Italy", correct: false },
+            { text: "France", correct: false },
+            { text: "Spain", correct: true },
+        ]
+    },
+    {
+        question: "Which two of these countries are located in Oceania?", 
+        answers: [
+            { text: "Singapore", correct: false },
+            { text: "New Zealand", correct: true },
+            { text: "Fiji", correct: true },
+            { text: "Australia", correct: false },
+        ]
+    },
+    {
+        question: "Which two countries are located in the Scandinavian Peninsula?", 
+        answers: [
+            { text: "Finland", correct: false },
+            { text: "Denmark", correct: false },
+            { text: "Sweden", correct: true },
+            { text: "Norway", correct: true },
+        ]
+    },
+    {
+        question: "Which two of the following are located on the continent of Asia?", 
+        answers: [
+            { text: "Vietnam", correct: true },
+            { text: "Cambodia", correct: true },
+            { text: "Australia", correct: false },
+            { text: "Venezuela", correct: false },
+        ]
+    },
+    {
+        question: "Which two countries are home to the world's largest deserts: the Sahara and the Arabian?", 
+        answers: [
+            { text: "Libya", correct: false },
+            { text: "Saudi Arabia", correct: true },
+            { text: "Chile", correct: false },
+            { text: "Egypt", correct: true },
+        ]
+    },
+    {
+        question: "Which two seas are connected by the Suez Canal?", 
+        answers: [
+            { text: "Red Sea", correct: true },
+            { text: "Black Sea", correct: false },
+            { text: "Baltic Sea", correct: false },
+            { text: "Mediterranean Sea", correct: true },
+        ]
+    },
+    {
+        question: "Which two cities are considered the "Capitals of Culture" for the year 2024?", 
+        answers: [
+            { text: "Tartu in Estonia", correct: true },
+            { text: "Bad Ischl in Austria", correct: true },
+            { text: "Milan in Italy", correct: false },
+            { text: "Brussels in Belgium", correct: false },
         ]
     }
 ]
