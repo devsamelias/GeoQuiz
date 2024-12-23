@@ -20,138 +20,138 @@ themeSwitch.addEventListener("click", () => {
 
 const questions = [
     {
-        question: "Which two countries share the longest border in the world?", 
+        question: "Which country is home to the world's longest coastline?", 
         answers: [
-            {text: "Canada and the United States", correct: false},
-            {text: "Brazil and Argentina", correct: true},
-            {text: "India and Pakistan", correct: false},
-            {text: "Russia and China", correct: true},
+            {text: "Australia", correct: false},
+            {text: "Canada", correct: true},
+            {text: "Russia", correct: false},
+            {text: "Brazil", correct: false},
         ]
     },
     {
-        question: "Which two of the following countries are located on the Iberian Peninsula?", 
+        question: "What is the only country that is also a continent?", 
         answers: [
-            { text: "Italy", correct: false },
-            { text: "Spain", correct: true },
-            { text: "Portugal", correct: true },
-            { text: "France", correct: false },
+            { text: "Greenland", correct: false },
+            { text: "India", correct: false },
+            { text: "Australia", correct: true },
+            { text: "Japan", correct: false },
         ]
     },
     {
-        question: "Which two rivers flow through the city of Paris?", 
+        question: "Which U.S. state is the only one that doesn't observe Daylight Saving Time?", 
         answers: [
-            { text: "Seine", correct: true },
-            { text: "Danube", correct: false },
-            { text: "Thames", correct: false },
-            { text: "Rhone", correct: true },
+            { text: "Hawaii", correct: true },
+            { text: "Alaska", correct: false },
+            { text: "California", correct: false },
+            { text: "New York", correct: false },
         ]
     },
     {
-        question: "Which two countries have the largest populations in Africa?", 
+        question: "What is the smallest country in the world by land area?", 
         answers: [
-            { text: "Nigeria", correct: true },
-            { text: "Ethiopia", correct: true },
-            { text: "South Africa", correct: false },
+            { text: "Monaco", correct: false },
+            { text: "Vatican City", correct: true },
+            { text: "San Marino", correct: false },
+            { text: "Nauru", correct: false },
+        ]
+    },
+    {
+        question: "Which of these countries does not border the Mediterranean Sea?", 
+        answers: [
+            { text: "Spain", correct: false },
+            { text: "Greece", correct: false },
             { text: "Egypt", correct: false },
+            { text: "Hungary", correct: true },
         ]
     },
     {
-        question: "Which two mountain ranges are located in North America?", 
+        question: "Which country is known as the 'Land of the Rising Sun'?", 
         answers: [
-            { text: "Andes", correct: false },
-            { text: "Alps", correct: false },
-            { text: "Rockies", correct: true },
-            { text: "Appalachian", correct: true },
-        ]
-    },
-    {
-        question: "Which two countries share the island of Borneo?", 
-        answers: [
+            { text: "South Korea", correct: false },
+            { text: "Japan", correct: true },
             { text: "Thailand", correct: false },
-            { text: "Indonesia", correct: true },
-            { text: "Brunei", correct: false },
-            { text: "Malaysia", correct: true },
+            { text: "China", correct: false },
         ]
     },
     {
-        question: "Which two African countries are landlocked and bordered by South Africa?", 
+        question: "In which country can you find the world's largest pyramid by volume?", 
         answers: [
-            { text: "Zimbabwe", correct: false },
-            { text: "Botswana", correct: true },
-            { text: "Lesotho", correct: true },
-            { text: "Namibia", correct: false },
+            { text: "Peru", correct: false },
+            { text: "Egypt", correct: false },
+            { text: "Mexico", correct: true },
+            { text: "Sudan", correct: false },
         ]
     },
     {
-        question: "Which two European capitals are located on rivers that share the same name as the city?", 
+        question: "Which is the largest desert in the world?", 
         answers: [
-            { text: "Paris", correct: true },
-            { text: "Budapest", correct: true },
-            { text: "London", correct: false },
-            { text: "Vienna", correct: false },
+            { text: "Sahara", correct: false },
+            { text: "Antarctica", correct: true },
+            { text: "Gobi", correct: false },
+            { text: "Kalahari", correct: false },
         ]
     },
     {
-        question: "Which two countries are separated by the Strait of Gibraltar?", 
+        question: "Which island is the only place in the world where you can find wild, non-migratory kangaroos?", 
         answers: [
-            { text: "Morocco", correct: true },
-            { text: "Italy", correct: false },
+            { text: "Kangaroo Island", correct: true },
+            { text: "Tasmania", correct: false },
+            { text: "New Zealand", correct: false },
+            { text: "Fiji", correct: false },
+        ]
+    },
+    {
+        question: "Which city is located on two continents, Europe and Asia?", 
+        answers: [
+            { text: "Cairo", correct: false },
+            { text: "Moscow", correct: false },
+            { text: "Istanbul", correct: true },
+            { text: "Berlin", correct: false },
+        ]
+    },
+    {
+        question: "Which country has the most official languages?", 
+        answers: [
+            { text: "South Africa", correct: true },
+            { text: "India", correct: false },
+            { text: "Switzerland", correct: false },
+            { text: "Belgium", correct: false },
+        ]
+    },
+    {
+        question: "Which is the longest river in the world?", 
+        answers: [
+            { text: "Amazon River", correct: false },
+            { text: "Mississippi River", correct: false },
+            { text: "Yangtze River", correct: false },
+            { text: "Nile River", correct: true },
+        ]
+    },
+    {
+        question: "Which country has the most time zones?", 
+        answers: [
+            { text: "United States", correct: false },
+            { text: "China", correct: false },
             { text: "France", correct: false },
-            { text: "Spain", correct: true },
+            { text: "Russia", correct: true },
         ]
     },
     {
-        question: "Which two of these countries are located in Oceania?", 
+        question: "Which country has no rivers?", 
         answers: [
-            { text: "Singapore", correct: false },
-            { text: "New Zealand", correct: true },
-            { text: "Fiji", correct: true },
-            { text: "Australia", correct: false },
-        ]
-    },
-    {
-        question: "Which two countries are located in the Scandinavian Peninsula?", 
-        answers: [
-            { text: "Finland", correct: false },
-            { text: "Denmark", correct: false },
-            { text: "Sweden", correct: true },
-            { text: "Norway", correct: true },
-        ]
-    },
-    {
-        question: "Which two of the following are located on the continent of Asia?", 
-        answers: [
-            { text: "Vietnam", correct: true },
-            { text: "Cambodia", correct: true },
-            { text: "Australia", correct: false },
-            { text: "Venezuela", correct: false },
-        ]
-    },
-    {
-        question: "Which two countries are home to the world's largest deserts: the Sahara and the Arabian?", 
-        answers: [
-            { text: "Libya", correct: false },
             { text: "Saudi Arabia", correct: true },
-            { text: "Chile", correct: false },
-            { text: "Egypt", correct: true },
+            { text: "Liechtenstein", correct: false },
+            { text: "Maldives", correct: false },
+            { text: "Vatican City", correct: false },
         ]
     },
     {
-        question: "Which two seas are connected by the Suez Canal?", 
+        question: "Which is the only country in the world that has a flag with a square shape?", 
         answers: [
-            { text: "Red Sea", correct: true },
-            { text: "Black Sea", correct: false },
-            { text: "Baltic Sea", correct: false },
-            { text: "Mediterranean Sea", correct: true },
-        ]
-    },
-    {
-        question: "Which two cities are considered the "Capitals of Culture" for the year 2024?", 
-        answers: [
-            { text: "Tartu in Estonia", correct: true },
-            { text: "Bad Ischl in Austria", correct: true },
-            { text: "Milan in Italy", correct: false },
-            { text: "Brussels in Belgium", correct: false },
+            { text: "Monaco", correct: false },
+            { text: "Nepal", correct: false },
+            { text: "Switzerland", correct: true },
+            { text: "Vatican City", correct: false },
         ]
     }
 ]
@@ -220,6 +220,27 @@ function showScore(){
     nextButton.style.display = "block";
 }
 
+/* Betygsätt resultatet, fungerar ej..
+function showGrade(){
+let score = 15;
+let grade;
+
+if (score >= 12) {
+    grade = 'A';
+    } else if (score >= 8) {
+        grade = 'B';
+        } else {
+            grade = 'F';
+            }
+            console.log(`Your grade is ${grade}`);
+}
+
+Call function
+showGrade(); 
+*/
+    
+
+
 function handleNextButton(){
     currentQuestionIndex++;
     if (currentQuestionIndex < questions.length){
@@ -236,5 +257,6 @@ nextButton.addEventListener("click", ()=>{
         startQuiz();
     }
 });
+
 
 startQuiz();

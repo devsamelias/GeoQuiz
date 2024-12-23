@@ -2,10 +2,13 @@
     --base-color:#d1d1cf;
     --base-variant:rgb(255, 157, 38);
     --text-color:rgb(0, 0, 0);
-    --secondary-text:rgb(252, 252, 252);
+    --secondary-text:rgb(0, 0, 0);
     --primary-color:rgb(252, 252, 252);
-    --accent-color:#aeaeac;
-    --borderbottom-color: rgb(255, 157, 38);
+    --accent-color:#d1d1cf;
+    --borderbottom-color:#292929;
+    --button-text: #29292;
+    --button-text-lm: rgb(0, 0, 0);
+    --button-text-dm: rgb(0, 0, 0);
 }
     
 .darkmode{
@@ -16,6 +19,10 @@
     --primary-color:#292929;
     --accent-color:rgb(255, 157, 38);
     --borderbottom-color: rgb(255, 157, 38);
+    --button-text:#292929;
+    --button-text-lm: rgb(255, 157, 38);
+    --button-text-dm: rgb(255, 157, 38);
+    
 }
 
 * {
@@ -63,7 +70,7 @@ body {
     color: var(--secondary-text);
     font-weight: 500;
     width: 50%;
-    border: 1px solid var(--base-color);
+    border: 1px solid var(--borderbottom-color);
     padding: 10px;
     margin: 10px auto 0;
     text-align: center;
@@ -76,7 +83,7 @@ body {
 
 .btn:hover:not([disabled]){
     background: var(--accent-color);
-    color: var(--base-variant);
+    color: var(--button-text-dm);
 }
 
 .btn:disabled{
@@ -84,11 +91,11 @@ body {
 }
 
 #next-btn {
-    background: var(--secondary-text);
-    color: var(--base-variant);
+    background: var(--base-variant);
+    color: var(--button-text-dm);
     font-weight: 500;
     width: 150px;
-    border: 1px solid var(--base-color);
+    border: 1px solid var(--borderbottom-color);
     padding: 10px;
     margin: 20px auto 0;
     border-radius: 4px;
@@ -97,11 +104,13 @@ body {
 }
 
 .correct{
-    background:#2bca70;
+    background:#0d9247;
+    color: var(--button-text-lm);
 }
 
 .incorrect{
-    background:#d72f2f;
+    background:#b41010;
+    color: var(--button-text-lm);
 }
 
 #theme-switch{
