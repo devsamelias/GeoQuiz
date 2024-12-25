@@ -4,11 +4,12 @@
     --text-color:rgb(0, 0, 0);
     --secondary-text:rgb(0, 0, 0);
     --primary-color:rgb(252, 252, 252);
-    --accent-color:#d1d1cf;
+    --accent-color:#aeaeac;
     --borderbottom-color:#292929;
     --button-text: #29292;
     --button-text-lm: rgb(0, 0, 0);
     --button-text-dm: rgb(0, 0, 0);
+    --svgicon-lm:rgb(255, 157, 38);
 }
     
 .darkmode{
@@ -22,6 +23,7 @@
     --button-text:#292929;
     --button-text-lm: rgb(255, 157, 38);
     --button-text-dm: rgb(255, 157, 38);
+    --svgicon-dm:rgb(255, 157, 38);
     
 }
 
@@ -76,7 +78,7 @@ body {
     text-align: center;
     border-radius: 4px;
     cursor: pointer;
-    transition: all 0.3s;
+    transition: all 0.2s;
     display: flex;
     justify-content: center;
 }
@@ -116,23 +118,25 @@ body {
 #theme-switch{
     height: 30px;
     width: 30px;
-    padding: 0;
+    padding: 0px;
     border-radius: 50%;
-    background-color: var(--base-color);
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    fill: var(--svgicon-lm);
     display: flex;
     justify-content: center;
     align-items: center;
-    position: fixed;
+    position:static;
     top: 20px;
-    right: 20px;
+    right: 80px;
 }
 
 #theme-switch svg{
-    fill: var(--borderbottom-color);
+    fill: var(--svgicon-dm);
 }
 
 #theme-switch svg:last-child{
-display: none;
+    display: none;
 }
 
 .darkmode #theme-switch svg:first-child{
