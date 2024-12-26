@@ -84,7 +84,7 @@ body {
 }
 
 .btn:hover:not([disabled]){
-    background: var(--accent-color);
+    background: var(--base-color);
     color: var(--button-text-dm);
 }
 
@@ -121,14 +121,15 @@ body {
     padding: 0px;
     border-radius: 50%;
     background-color: var(--primary-color);
-    border-color: var(--primary-color);
     fill: var(--svgicon-lm);
     display: flex;
     justify-content: center;
     align-items: center;
-    position:static;
-    top: 20px;
-    right: 80px;
+    position: static; 
+    float: right;
+    top: 10px;
+    right: 10px;
+    border: none;
 }
 
 #theme-switch svg{
